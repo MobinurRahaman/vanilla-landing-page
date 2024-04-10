@@ -10,11 +10,13 @@ body {
 }
 
 header {
-  background-color: #f00;
+  background-color: #ed1b24;
   padding: 20px;
 }
 
 nav ul {
+  display: flex;
+  align-items: center;
   list-style: none;
 }
 
@@ -28,17 +30,36 @@ nav ul li a {
   text-decoration: none;
 }
 
+.header-book-now-btn a {
+  padding: 5px 10px;
+  border-radius: 99px;
+  background-color: #fff;
+  color: #000;
+}
+
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f00;
-  padding: 10px;
+  background-color: #ed1b24;
   z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .dropdown:hover .dropdown-content {
   display: flex;
   flex-direction: column;
+}
+
+.flex-grow {
+  display: flex;
+  flex-grow: 1;
 }
 
 .landing {
@@ -48,7 +69,7 @@ nav ul li a {
 
 .landing h1 {
   font-size: 3em;
-  color: #f00;
+  color: #ed1b24;
 }
 
 .services {
@@ -68,5 +89,5 @@ nav ul li a {
 }
 
 .service h3 {
-  color: #f00;
+  color: #ed1b24;
 }
