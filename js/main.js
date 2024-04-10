@@ -12,7 +12,7 @@ const servicesData = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, magnam!",
     icon: "phone_iphone",
-    url: "#",
+    url: "/service1",
     image: "https://source.unsplash.com/random/?services&1",
   },
   {
@@ -20,7 +20,7 @@ const servicesData = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, magnam!",
     icon: "phone_iphone",
-    url: "#",
+    url: "/service1",
     image: "https://source.unsplash.com/random/?services&2",
   },
   {
@@ -28,7 +28,7 @@ const servicesData = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, magnam!",
     icon: "phone_iphone",
-    url: "#",
+    url: "/service1",
     image: "https://source.unsplash.com/random/?services&3",
   },
   {
@@ -36,7 +36,7 @@ const servicesData = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, magnam!",
     icon: "phone_iphone",
-    url: "#",
+    url: "/service1",
     image: "https://source.unsplash.com/random/?services&4",
   },
   {
@@ -44,7 +44,7 @@ const servicesData = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, magnam!",
     icon: "phone_iphone",
-    url: "#",
+    url: "/service1",
     image: "https://source.unsplash.com/random/?services&5",
   },
   {
@@ -52,7 +52,7 @@ const servicesData = [
     description:
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam, magnam!",
     icon: "phone_iphone",
-    url: "#",
+    url: "/service1",
     image: "https://source.unsplash.com/random/?services&6",
   },
 ];
@@ -80,6 +80,9 @@ function generateServiceCards() {
   servicesData.forEach((service) => {
     const card = document.createElement("div");
     card.classList.add("service-card");
+    card.addEventListener("click", () => {
+      window.location.href = service.url;
+    });
 
     const header = document.createElement("div");
     header.classList.add("service-card-header");
