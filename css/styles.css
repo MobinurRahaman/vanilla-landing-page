@@ -1,0 +1,210 @@
+:root {
+  --primary-color: #ed1b24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--primary-color);
+}
+
+.brand-logo {
+  color: #bbb;
+  margin-right: 15px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.header-book-now-btn a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 5px 10px;
+  border-radius: 99px;
+  background-color: #fff;
+  color: #000;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--primary-color);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  padding: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-grow {
+  display: flex;
+  flex-grow: 1;
+}
+
+.landing {
+  text-align: center;
+  padding: 100px 0;
+}
+
+.landing h1 {
+  font-size: 3em;
+  color: var(--primary-color);
+}
+
+form {
+  margin: 300px 20px 0 20px;
+  padding: 40px 48px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 10px;
+  row-gap: 20px;
+  border-radius: 18px;
+  box-shadow: 0 4px 34px 0 rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="email"] {
+  padding: 5px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+}
+
+input[type="submit"] {
+  padding: 6px 10px;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.services {
+  margin: 0 20px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.services h2 {
+  margin-bottom: 20px;
+}
+
+.service-card {
+  position: relative;
+  padding: 27.5px 25px 18px 36px;
+  width: 337px;
+  height: 251px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  background-color: #fff;
+  border: 1px solid rgba(114, 114, 114, 1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.service-card-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 22px;
+}
+
+.service-card .icon {
+  flex: 0 0 66px; /* Use this instead of icon width to maintain the actual icon width */
+  height: 66px;
+  display: grid;
+  place-items: center;
+  color: #f00;
+  border-radius: 999px;
+  border: 1px solid #aaa;
+}
+
+.service-card h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  letter-spacing: 2%;
+}
+
+.service-card-body {
+  text-align: left;
+  font-weight: 400;
+  color: #121216;
+}
+
+.service-card .arrow {
+  position: absolute;
+  right: 25px;
+  bottom: 18px;
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  border-radius: 21px;
+  background-color: var(--primary-color);
+  z-index: 2;
+}
+
+.service-card:hover .service-card-overlay {
+  top: 0;
+}
+
+.service-card-overlay {
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: #fff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://source.unsplash.com/random/?services&2");
+  background-size: cover;
+  z-index: 1;
+  top: 100%;
+  transition: top 0.5s;
+}
