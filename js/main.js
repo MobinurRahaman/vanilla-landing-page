@@ -57,8 +57,25 @@ const servicesData = [
   },
 ];
 
+// // Function to fetch service data from the server
+// async function fetchServiceData() {
+//   try {
+//     const response = await fetch('http://localhost:8000/api/services');
+//     if (!response.ok) {
+//       throw new Error('Failed to fetch service data');
+//     }
+//     const data = await response.json();
+//     return data;
+//   } catch (error) {
+//     console.error('Error fetching service data:', error.message);
+//     return [];
+//   }
+// }
+
 function generateServiceCards() {
   const container = document.querySelector(".services-card-container");
+
+  // const servicesData = await fetchServiceData(); // Fetch service data. It is needed to make generateServiceCards an async function to use this line.
 
   servicesData.forEach((service) => {
     const card = document.createElement("div");
