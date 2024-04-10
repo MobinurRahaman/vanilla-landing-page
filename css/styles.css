@@ -129,6 +129,13 @@ input[type="submit"] {
   margin-bottom: 20px;
 }
 
+.services-card-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
 .service-card {
   position: relative;
   padding: 27.5px 25px 18px 36px;
@@ -201,8 +208,6 @@ input[type="submit"] {
   flex-direction: column;
   gap: 20px;
   color: #fff;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("https://source.unsplash.com/random/?services&2");
   background-size: cover;
   z-index: 1;
   top: 100%;
